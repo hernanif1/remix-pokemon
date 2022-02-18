@@ -30,7 +30,7 @@ export default function Index() {
         </button>
       </Form>
 
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {pokemons.map((pokemon) => (
           <div
             key={pokemon.name}
