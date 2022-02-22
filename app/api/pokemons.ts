@@ -3,7 +3,7 @@ import { PokemonApi, PokemonDetails } from "~/types";
 export const getAllPokemons = async () => {
   try {
     const pokemons: PokemonApi = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=27"
+      "https://pokeapi.co/api/v2/pokemon?limit=9"
     ).then((response) => response.json());
 
     const poke: PokemonDetails[] = await Promise.all(
