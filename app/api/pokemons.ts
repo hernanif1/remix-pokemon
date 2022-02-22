@@ -1,4 +1,3 @@
-import { resolvePath } from "react-router";
 import { PokemonApi, PokemonDetails } from "~/types";
 
 export const getAllPokemons = async () => {
