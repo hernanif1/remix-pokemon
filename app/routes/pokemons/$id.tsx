@@ -1,4 +1,4 @@
-import Color, { useColor } from "color-thief-react";
+import { useColor } from "color-thief-react";
 import { useEffect } from "react";
 import { Link, useLoaderData } from "remix";
 import invariant from "tiny-invariant";
@@ -18,11 +18,9 @@ export default function Pokemon() {
   const { data: color } = useColor(imageURL, "rgbArray", {
     crossOrigin: "Anonymous",
   });
-  console.log("imageURL", imageURL);
 
   useEffect(() => {
     if (color) {
-      console.log("color", color);
       document.documentElement.style.setProperty(
         "--mystery-var",
         color.join(", ")
