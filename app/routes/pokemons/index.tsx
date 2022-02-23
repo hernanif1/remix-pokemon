@@ -36,7 +36,10 @@ export default function Index() {
             key={pokemon.name}
             className="bg-white p-4 rounded-lg text-center flex flex-col min-w-[220px] justify-center items-center w-full md:w-auto"
           >
-            <img src={`/assets/${pokemon.name}.gif`} width={150} />
+            <img
+              src={`https://unolabuzdljwxldddzuf.supabase.in/storage/v1/object/public/remix-pokemon-app/${pokemon.name}.gif`}
+              width={150}
+            />
             <div className="block capitalize mt-8 font-bold">
               {pokemon.name}
             </div>

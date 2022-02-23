@@ -13,7 +13,7 @@ export const loader = async ({ params }: { params: { id: string } }) => {
 
 export default function Pokemon() {
   const pokemon = useLoaderData<PokemonDetails>();
-  const imageURL = `/assets/${pokemon.name}.gif`;
+  const imageURL = `https://unolabuzdljwxldddzuf.supabase.in/storage/v1/object/public/remix-pokemon-app/${pokemon.name}.gif`;
   const { data: color } = useColor(imageURL, "rgbArray");
 
   useEffect(() => {
