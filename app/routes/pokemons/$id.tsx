@@ -1,4 +1,4 @@
-import { useColor } from "color-thief-react";
+import Color, { useColor } from "color-thief-react";
 import { useEffect } from "react";
 import { Link, useLoaderData } from "remix";
 import invariant from "tiny-invariant";
@@ -14,7 +14,11 @@ export const loader = async ({ params }: { params: { id: string } }) => {
 export default function Pokemon() {
   const pokemon = useLoaderData<PokemonDetails>();
   const imageURL = `https://unolabuzdljwxldddzuf.supabase.in/storage/v1/object/public/remix-pokemon-app/${pokemon.name}.gif`;
-  const { data: color } = useColor(imageURL, "rgbArray");
+
+  const { data: color } = useColor(imageURL, "rgbArray", {
+    crossOrigin: "Anonymous",
+  });
+  console.log("imageURL", imageURL);
 
   useEffect(() => {
     if (color) {
